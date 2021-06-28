@@ -1,0 +1,150 @@
+/* ***********************************************UNIVERSAL OPERATORS******************************************************* */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.shadow-med {
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.692);
+}
+
+body {
+  background-image: url(/Cheat\ Sheet-backround.png);
+  background-size: cover;
+  background-attachment: fixed !important;
+  ;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ******************************************FOR FILTERING AND HIDING******************************************************** */
+
+.code {
+  color: #ffffff;
+  width: 180px;
+  height: 200px !important;
+  overflow: hidden !important;
+  text-align: center;
+  margin: 10px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* *************************************************FOR INPUT AT RIGHT-TOP***************************************************** */
+
+.form {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  transform: scale(0.8);
+}
+
+.formInside {
+  padding: 7px;
+  position: relative;
+  height: 55px;
+  width: 200px;
+}
+
+.formInput {
+  padding-left: 15px;
+  padding-right: 5px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 60px;
+  font-size: 18px;
+}
+
+.formInput:focus {
+  border: 1px solid black;
+  box-shadow: 5px 3px 5px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.formInput::placeholder {
+  color: black;
+}
+
+.clearSearch {
+  display: none;
+  position: fixed;
+  top: 18px;
+  right: 25px;
+}
+
+/* ********************************************************NAVBAR*************************************************************** */
+
+.navbar {
+  z-index: 22;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(12, 12, 19);
+}
+
+/* **************************************************************LIST************************************************************ */
+
+.list {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.692);
+}
+
+.list li {
+  list-style: none;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  right: 190px;
+  color: white;
+}
+
+/* *****************************************************TO TOP BUTTON********************************************************** */
+
+#myBtn {
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: rgba(27, 30, 34, 0.4);
+  color: white;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/* ******************************************************CONTENT************************************************************* */
+
+.content {
+  margin-top: 70px;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.code a {
+  background-color: rgb(27, 30, 34);
+}

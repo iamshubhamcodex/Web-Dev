@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+        <style>
+        /*******************************************Style**********************************/
+        *{margin:0;padding:0;box-sizing:border-box;} html{scroll-behavior:smooth;} body {position: relative; } 
+        		.dropdown-menu  .anchor:hover{background-color:rgba(0,0,0,0.3) !important;} header{background-color:rgb(27,30,34);}
+				#myBtn {height:30px;width:30px;display: none;position: fixed;bottom: 15px;right: 15px;z-index: 99;font-size: 20px;border: none;outline: none;
+                background-color: rgba(27,30,34,0.4);color: white;cursor: pointer;border-radius: 7px;}#myBtn:hover {background-color: #555;}
+                /* Make the image fully responsive in carasoul*/
+      .carousel-inner img {width: 100%;height: 100%;}
+        </style>
+
+            <!--******************************************BODY**********************************-->
+
+
+    <body  data-spy="scroll" class="bg-dark text-white" data-target=".navbar" data-offset="50">
+			<!---To Top Button-->	
+			<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-double-up"></i></button>
+            <!--******************************************Header**********************************-->
+
+        <header class="container-fuid" >
+            <nav class="navbar  navbar-expand-sm navbar-dark ">
+                <a class="navbar-brand" href="#" >Bootstrap</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#toast">Toast</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section2">Sections</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#card">Card</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#progressbar">Progress</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#image">Images</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#carousel">Carousel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#utilities">Utilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#list">List</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#modal">Modal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tooltip">Tooltip</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#button">Button</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#form">Form</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#v-form">V-Form</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Dropdown</a>
+                        <div class="dropdown-menu bg-dark navbar-dark">
+                          <a class="anchor dropdown-item text-center ">Hi</a><a class="anchor dropdown-item text-center">Hi</a>
+                          <a class="anchor dropdown-item text-center">Hi</a><a class="anchor dropdown-item text-center">Hii</a>
+                          <a class="anchor dropdown-item text-center">Hi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><input class=" pl-2 nav-item my-1" placeholder="Search"></li>
+                    <li class="nav-item"><a class="nav-link bg-success rounded-sm ml-2 my-1"><i class="fa fa-search nav"></i></a></li>
+                 </ul>
+            </nav>
+        </header>
+				<!--******************************************Main Content**********************************-->
+
+                <!--******************************************Toast**********************************-->
+
+		<main-content class=" bg-dark text-white">
+            <div class="container bg-dark text-white">
+              <h3>Toast Example</h3>
+              <p>In this example, we use data-autohide="false" to show the toast by default. You can close it by clicking on the close (x) icon inside the toast header.	</p>
+              <div id="toast" class="toast my-5" data-autohide="false">
+                <div class="toast-header">
+                  <strong class="mr-auto text-primary">Toast Header</strong>
+                  <small class="text-muted">5 mins ago</small>
+                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                </div>
+                <div class="toast-body">
+                  Some text inside the toast body
+                </div>
+              </div>
+            </div>
+
+                    <!--******************************************Scroll to Section**********************************-->
+
+
+            <div id="section2" class="container bg-dark text-white" style="padding-top:70px;padding-bottom:70px">
+              <h1>Section 2</h1>
+              <p>Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+
+                    <!--******************************************Card**********************************-->
+
+
+            <div class="container  bg-dark text-white">
+                <div class="card  py-5 my-5" id="card" style="width:400px">
+                    <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">John Doe</h4>
+                      <p class="card-text">Some example text.</p>
+                      <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+                <div class="py-5 my-5 bg-dark text-white">
+                    <h2 >Basic Progress Bar</h2>
+                    <div class="progress text-center">
+                        <div class="progress-bar " id="progressbar" style="transition:all 1s ease;width:0%;">HTML</div>
+                    </div>
+                </div>
+            </div>
+
+                    <!--******************************************Image**********************************-->
+
+
+            <div class="container my-3 bg-dark text-white" id="image">
+              <h2>Image</h2>
+              <div class="row">
+                <div class="col-3">
+                    <p>The .img-fluid class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>
+                    <img class="img-fluid" style="max-width:50%!important;"src="img_chania.jpg" alt="Chania" width="460" height="345"> 
+                </div>
+                <div class="col-3">
+                    <p>The .rounded-circle makes image perfectly circle and only using .rouonded gives images border-radius of min 5px</p>
+                    <img src="cinqueterre.jpg" class="rounded-circle" style="height:200px;width:200px" alt="Cinque Terre">
+                </div>
+                <div class="col-3">
+                    <p>The .img-thumbnail class shapes the image to a thumbnail (bordered):</p>
+                    <img src="cinqueterre.jpg" style="height:200px;width:200px" class="img-thumbnail" alt="Cinque Terre">
+                </div>
+                <div class="col-3">
+                    <p>The .mx-auto and .d-block takes images to centre</p>
+                    <img src="paris.jpg" style="height:200px;width:200px"class="mx-auto d-block"> 
+                </div>
+            </div>
+
+                    <!--******************************************List and Utilities**********************************-->
+
+
+            <div class="container bg-dark text-white" id="list">
+            <embed type="text/html" src="https://jeemain.nta.nic.in/webinfo2021/Page/Page?PageId=1&LangId=P" width="500" height="200">
+            </div>
+            <div class="container bg-dark text-white" id="utilities">
+            <embed type="text/html" src="https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp" width="500" height="200">
+            </div>
+
+                    <!--******************************************Carousel**********************************-->
+
+
+            <div class="container bg-dark text-white my-3" id="carousel">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="la.jpg" alt="Los Angeles" width="1100" height="500">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="chicago.jpg" alt="Chicago" width="1100" height="500">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="ny.jpg" alt="New York" width="1100" height="500">
+                      </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+
+                    <!--******************************************Modal**********************************-->
+
+            <div class="container pt-3 bg-dark text-white" id="modal">
+              <h2>Modal Example</h2>
+              <!-- Button to Open the Modal -->
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Open modal
+              </button>
+              <!-- The Modal -->
+              <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">Modal Heading</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      Modal body..
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!---***************************Tooltip******************************-->
+
+            <div class="container pt-3 my-3 bg-dark text-white">
+               <a href="#" data-placement="top" data-toggle="tooltip" title="Hooray!">Hover over me</a><!--data placement may be top, bottom, right and left-->
+            </div>
+
+                    <!--******************************************Popover**********************************-->
+
+            <div class="container bg-dark text-white" id="tooltip">
+                <a href="#" data-toggle="popover" title="Popover Header" data-content="Conent in popover">Toggle popover</a><!---data-placement same as up-->
+            </div>  
+
+                    <!---*****************************************Button*********************************-->
+
+            <div class="container my-3 bg-dark text-white" id="button">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-primary active">Primary</button>
+                <button type="button" class="btn btn-primary disabled">Primary</button>
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-primary btn-lg">Large</button><!---We can add active and disabled class to make button active/disabled-->
+            </div> 
+
+                    <!---*****************************************Form*********************************-->
+
+            <div class="conatiner bg-dark text-white" id="form">
+                <form action="/action_page.php">
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" placeholder="Enter email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"> Remember me
+                        <label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>  
+
+            <!---**************Validated Form********************-->
+
+            <div class="container my-3 bg-dark text-white" id="v-form">
+                <h2>Form Validation</h2>
+                <p>In this example, we use <code>.was-validated</code> to indicate what's missing before submitting the form:</p>
+                <form action="/action_page.php" class="was-validated">
+                    <div class="form-group">
+                        <label for="uname">Username:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+                          <div class="valid-feedback">Valid.</div>
+                          <div class="invalid-feedback">Check this checkbox to continue.</div>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+		</main-content>
+      		
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+			<script>
+              //for progressbar
+              $(window).scroll(function() {
+                var hT = $('.card').offset().top,//gives the height of div element from top
+                    hH = $('.card').outerHeight(),//gives the height of div element
+                    wH = $(window).height(), // gives the height of window screen
+                    wS = $(this).scrollTop();
+                if (wS > (hT+hH-wH)){incb()
+                                    }
+              });
+              function incb(){document.getElementById("progressbar").style.width = "70%";}
+
+              //for popover
+              $(document).ready(function(){
+                $('[data-toggle="popover"]').popover();
+              });
+
+              //for tooltip
+              $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();
+              });
+              //for toast
+
+              $(document).ready(function(){
+                $('.toast').toast('show');
+              });
+              //To Top Button
+              var mybutton = document.getElementById("myBtn");
+              window.onscroll = function() {scrollFunction()};
+              function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                  mybutton.style.display = "block";
+                } else {
+                  mybutton.style.display = "none";
+                }
+              }
+              // When the user clicks on the button, scroll to the top of the document
+              function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+              }
+			</script>
+    </body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHEATSHEET</title>
+  <link rel="stylesheet" href="prism.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* ***********************************************UNIVERSAL OPERATORS******************************************************* */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .shadow-med {
+      box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.692);
+    }
+
+    body {
+      background-image: url(/Cheat\ Sheet-backround.png);
+      background-size: cover;
+      background-attachment: fixed !important;
+      ;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ******************************************FOR FILTERING AND HIDING******************************************************** */
+    .code {
+      color: #ffffff;
+      width: 180px;
+      height: 200px;
+      overflow: hidden;
+      text-align: center;
+      margin: 10px;
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    /* *************************************************FOR INPUT AT RIGHT-TOP***************************************************** */
+    .form {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      transform: scale(0.8);
+    }
+
+    .formInside {
+      padding: 7px;
+      position: relative;
+      height: 55px;
+      width: 200px;
+    }
+
+    .formInput {
+      padding-left: 15px;
+      padding-right: 5px;
+      height: 100%;
+      width: 100%;
+      outline: none;
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 60px;
+      font-size: 18px;
+    }
+
+    .formInput:focus {
+      border: 1px solid black;
+      box-shadow: 5px 3px 5px 0 rgba(0, 0, 0, 0.5) inset;
+    }
+
+    .formInput::placeholder {
+      color: black;
+    }
+
+    .clearSearch {
+      display: none;
+      position: fixed;
+      top: 18px;
+      right: 25px;
+    }
+
+    /* ********************************************************NAVBAR*************************************************************** */
+    .navbar {
+      z-index: 22;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgb(12, 12, 19);
+    }
+
+    /* **************************************************************LIST************************************************************ */
+    .list {
+      z-index: 22;
+      display: none;
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.692);
+    }
+
+    .list li {
+      list-style: none;
+      text-transform: uppercase;
+      margin: 5px;
+    }
+
+    .close {
+      position: fixed;
+      top: 20px;
+      right: 190px;
+      color: white;
+    }
+
+    /* *****************************************************TO TOP BUTTON********************************************************** */
+    #myBtn {
+      height: 30px;
+      width: 30px;
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      z-index: 99;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      background-color: rgba(27, 30, 34, 0.4);
+      color: white;
+      cursor: pointer;
+      border-radius: 7px;
+    }
+
+    #myBtn:hover {
+      background-color: #555;
+    }
+
+    /* ******************************************************CONTENT************************************************************* */
+    .content {
+      margin-top: 70px;
+      min-height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .code a {
+      background-color: rgb(27, 30, 34);
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-white">
+  <jha>
+
+    <!-- ***************************************************NAVBAR************************************************** -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="navbar-brand" href="index.html">Cheat Sheet</a></li>
+        <li class="nav-item"><a onclick="showList()" class="nav-link">List of all Cheats</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Some Recent Codes
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </li>
+        <li class="nav-item mr-auto">
+          <div class="form">
+            <div class="formInside">
+              <input class="formInput" id="input" oninput="search()" placeholder="Search..." autocomplete="none"><i
+                id="clearSearch" onclick="clearSearch()" class="clearSearch fa fa-times"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ********************************************************LIST******************************************************** -->
+    <div class="list" id="list">
+      <div class="close" onclick="closeList()"><i class="fa fa-times"></i></div>
+      <div class="row text-white text-center" style="margin:100px;">
+        <div class="col-4 col-md-6 col-sm-12">
+          <li><a href="#html_boiler">html boiler</a></li>
+          <li><a href="#slide_show">slide show</a></li>
+        </div>
+        <div class="col-4 col-md-6 col-sm-12">
+          <li>hi</li>
+          <li>hil</li>
+        </div>
+        <div class="col-4 col-sm-12 col-md-6">
+          <li>hi</li>
+          <li></li>
+        </div>
+      </div>
+    </div>
+
+    <!-- **************************************************************MAIN CONTENT******************************************* -->
+    <section class="content">
+      <div id="html_boiler" class="code html_boiler shadow-med"><a href="#" style="font-family: cursive;">HTML
+          BOILER</a>
+        <pre style="font-size: 5px;" class="language-html">
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+
+
+
+
+
+&lt;link rel="stylesheet" href="prism.css"&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?"&gt;
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="prism.js"&gt;&lt;/script&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+      <div id="slide_show" class="code shadow-med slide_show"><a href="/Links/slide_show.html"
+          style="font-family: cursive;">SLIDE
+          SHOW</a>
+        <pre style="font-size: 5px;" class="language-html"><code>
+&lt;style&gt; 
+body{overflow-x:hidden;}.outer{padding-top:25px;background:yellow;position:relative; height:150px;}.outer:hover .c{animation-play-state:paused;}
+.outer .c {width: 100px;height: 100px;background: red;position:absolute;left:-150px;animation-play-state:paused;
+animation: mymove 9s linear infinite;}.c:hover {background-color:blue;}#i2{animation-delay:1.5s;background-color:blue;}#i3{animation-delay:3s;background-color:white;} 			#i4{animation-delay:4.5s;background-color:black;}#i5{animation-delay:6s;background-color:orange;} 
+#i6{animation-delay:7.5s;background-color:pink;}@keyframes mymove {from {left: -150px;}to {left: 100%;}}
+@media only screen and (max-width:600px){.outer .c{animation:mymove 15s linear infinite} 					#i2{animation-delay:3s;}#i3{animation-delay:6s;}#i4{animation-delay:9s;} 
+#i5{animation-delay:12s;}#i6{animation-delay:15s;}}@media only screen and (max-width:450px){
+@keyframes mymove {from {left: -150px;}to {left: 200%;}} .outer .c{animation:mymove 12s linear infinite}   #i2{animation-delay:2s;}#i3{animation-delay:4s;}#i4{animation-delay:6s;}#i5{animation-delay:8s;} 			#i6{animation-delay:10s;}}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;div class="outer"&gt;
+&lt;div class="c" id="i1"&gt;&lt;/div&gt;
+&lt;div class="c" id="i2"&gt;&lt;/div&gt;
+&lt;div class="c" id="i3"&gt;&lt;/div&gt;
+&lt;div class="c" id="i4"&gt;&lt;/div&gt;
+&lt;div class="c" id="i5"&gt;&lt;/div&gt;
+&lt;div class="c" id="i6"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <div class="code carsa">Volvo</div>
+      <div class="code colors">Red</div>
+      <div class="code cars animals">Mustang</div>
+      <div class="code colors">Blue</div>
+      <div class="code animals">Cat</div>
+      <div class="code animals">Dog</div>
+      <div class="code fruits">Melon</div>
+      <div class="code fruits animals" id="here">Kiwi</div>
+      <div class="code fruits">Banana</div>
+      <div class="code fruits">Lemon</div>
+      <div class="code animals">Cow</div>
+    </section>
+
+    <!---To Top Button-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-double-up"></i></button>
+    
+    <!-- *********************************************************FOOTER******************************************************* -->
+    <footer class="footer bg-dark ">
+      <pre
+        style="margin-bottom: 0;padding-bottom: 0;"><p style="margin-bottom: 0;padding-bottom: 0px;" class="d-flex justify-content-center text-white copy">All Rights Reserved  @CHEATSHEET</p></pre>
+    </footer>
+  </jha>
+
+  <script>
+    function clearSearch() {
+      document.getElementById("input").value = "";
+      document.getElementById("clearSearch").style.display = "none"; code_selection("all")
+    }
+
+    function showList() {
+      document.getElementById("list").style.display = "block";
+    }
+
+    function closeList() {
+      document.getElementById("list").style.display = "none";
+    }
+
+    function search() {
+      var iin = document.getElementById("input").value; code_selection(iin);
+      if (iin == "") {
+        document.getElementById("clearSearch").style.display = "none";
+      } else {
+        document.getElementById("clearSearch").style.display = "block";
+      }
+    }
+
+    code_selection("all")
+
+    function code_selection(c) {
+      var x, i;
+      x = document.getElementsByClassName("code");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="prism.js"></script>
+
+</body>
+
+</html>
