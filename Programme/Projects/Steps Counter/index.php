@@ -6,7 +6,7 @@
     <meta name="description" content="" />
     <style></style>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Document</title>
+    <title>Steps Counter</title>
   </head>
   <body>
       <div class="container">
