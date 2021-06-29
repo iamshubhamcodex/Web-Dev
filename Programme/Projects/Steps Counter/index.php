@@ -11,7 +11,7 @@
   <body>
       <div class="container">
           <h1>Total Steps are:<br><span class="steps"></span></h1>
-          <p style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"  > Click Me </p>
+          <p> Click Me </p>
       </div>
     <script src="index.js"></script>
   </body>
