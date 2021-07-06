@@ -34,21 +34,27 @@ body {
 
 .container h1 {
   font-size: 39px;
-  margin-bottom: 200px;
+  margin-bottom: 160px;
   display: grid;
   place-items: center;
   text-align: center;
 }
 
-.steps {
+.container .steps {
+  font-size: 75px;
   margin-top: 11px;
   color: #ff8d8d;
+  height: 0px;
+  transition: all 0.5s linear;
+}
+.container.active .steps{
+  height: 75px;
 }
 
 .container p {
-  margin:  0 15px;
+  transition: all 0.5s linear;
   cursor: pointer;
-  margin-top: -186px;
+  margin-top: -70px;
   border: 2px solid rgb(80, 80, 151);
   border-radius: 50px;
   padding: 10px 25px;
@@ -57,29 +63,46 @@ body {
   background: #2d2c8685;
   color: rgb(156, 156, 197);
 }
-.container .btn{
+.container.active p{
+  margin-top: 45px;
+}
+
+.container .btn {
+  width: 55%;
   display: flex;
+  transition: all 0.5s linear;
   justify-content: space-around;
   align-items: center;
 }
+
+.container.active .btn{
+  width: 125%;
+}
+
 .hm {
   position: absolute;
+  top: -220px;
   width: 290px;
-  height: 200px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
   left: 50%;
+  transition: all 0.7s ease-in-out;
   transform: translateX(-50%);
   background: #102033b8;
   border-radius: 10px;
+}
+.hm.active {
+  /* position: absolute; */
+  top: 0px;
 }
 
 .hm h2 {
   margin: 45px 5px;
 }
 
-.hm input[type="text"] {
+.hm input {
   padding: 5px 15px;
   border: none;
   outline: none;
