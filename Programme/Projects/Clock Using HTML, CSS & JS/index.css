@@ -1,0 +1,122 @@
+html {
+  font-size: 62.5%;
+}
+#clockContainer {
+  position: relative;
+  margin: auto;
+  height: 25vw;
+  width: 25vw;
+  background: url(clock.png) no-repeat;
+  background-size: 100%;
+}
+@media screen and (max-width: 500px) {
+  #clockContainer {    
+    transform: translateX(-135px);
+  }
+}
+#hour,
+#minute,
+#second {
+  position: absolute;
+  background: black;
+  border-radius: 10px;
+  transform-origin: bottom;
+}
+#hour {
+  width: 1.8%;
+  height: 25%;
+  top: 25%;
+  left: 48.85%;
+  opacity: 0.8;
+}
+#minute {
+  width: 1.6%;
+  height: 30%;
+  top: 19%;
+  left: 48.9%;
+  opacity: 0.8;
+}
+#second {
+  width: 1%;
+  height: 40%;
+  top: 9%;
+  left: 49.25%;
+  opacity: 0.8;
+}
+
+.option {
+  margin: 17px auto;
+  display: flex;
+  border: 1px solid red;
+  justify-content: space-around;
+  font-size: 2rem;
+  width: 80%;
+}
+.option h5 {
+  cursor: pointer;
+}
+.option h5:hover {
+  text-decoration: underline;
+}
+.container {
+  border: 1px solid blue;
+  width: 40%;
+  min-height: 12rem;
+  margin: 40px auto;
+  display: grid;
+  place-items: center;
+}
+.container button {
+  border: 1px solid blue;
+  border-radius: 1.2rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  margin: 1rem auto;
+  outline: none;
+}
+.container input {
+  width: 80%;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1.5rem;
+  outline: none;
+  border: 1px solid black;
+  font-size: 1.5rem;
+}
+.alarm,
+.stpwatch,
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.time_span,
+#stp_time {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem auto;
+}
+.d-none {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  #clockContainer {
+    height: 40vw;
+    width: 40vw;
+  }
+  html {
+    font-size: 55%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #clockContainer {
+    height: 60vw;
+    width: 60vw;
+  }
+  html {
+    font-size: 45%;
+  }
+}

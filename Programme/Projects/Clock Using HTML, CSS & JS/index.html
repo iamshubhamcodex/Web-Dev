@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Clock Using Pure JS</title>
+  </head>
+  <body>
+    <div id="clockContainer">
+      <div id="hour"></div>
+      <div id="minute"></div>
+      <div id="second"></div>
+    </div>
+    <div class="setAlarm">
+      <div class="option">
+        <h5 id="alrm">Alarm</h5>
+        <h5 id="stp">Stopwatch</h5>
+        <h5 id="tmr">Timer</h5>
+      </div>
+      <div class="container">
+        <div class="alarm d d-none">
+          <input type="text" id="inp" />
+          <button onclick="checkA()" id="btn">Set Alarm</button>
+        </div>
+        <div class="stpwatch d d-none">
+          <span id="stp_time"></span>
+          <button onclick="checkS()" class="strt">Start Watch</button>
+          <button onclick="stopS()" class="stp d-none">Stop Watch</button>
+        </div>
+        <div class="timer d d-none">
+          <input type="text" id="timer_inp" />
+          <button onclick="checkT()">Set Timer</button>
+          <span class="time_span d-none"></span>
+        </div>
+      </div>
+      <!-- <audio id="aud" src="alarm.mp3"></audio> -->
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
