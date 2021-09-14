@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+  font-weight: lighter;
+  font-style: italic;
+  font-variant: small-caps;
+}
+*::selection {
+  background-color: rgb(1, 5, 73);
+  color: yellow;
+  font-weight: bolder;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: rgb(8, 22, 34);
+  color: white;
+}
+.container {
+  position: relative;
+  min-width: 12rem;
+  width: 70vw;
+  max-width: 28rem;
+  height: 70vw;
+  max-height: 80vh;
+  margin: 0, auto;
+  background-color: rgba(0, 0, 0, 0.26);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding: 1.2rem 2rem; */
+  box-shadow: inset 8px 8px 5px -5px rgba(255, 255, 255, 0.25),
+    8px 8px 7px -3px rgba(0, 0, 0, 0.55);
+  transition: all 0.2s linear;
+}
+.container:hover {
+  box-shadow: inset -8px -8px 5px -5px rgba(255, 255, 255, 0.25),
+    inset 8px 8px 7px -3px rgba(0, 0, 0, 0.55);
+  transform: scale(0.95);
+}
+.inpG {
+  position: relative;
+  /* padding: 0.5rem 1rem; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+#start,
+#end {
+  /* padding: 1.2rem, 1rem; */
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid blue;
+  color: white;
+  width: 40%;
+  text-align: center;
+  font-weight: lighter;
+  margin: 0.5rem;
+}
+h1{
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-size: 2rem;
+  color: black;
+  font-weight: bolder;
+  text-shadow: 2px 2px 3px  yellow;
+}
+#btn {
+  font-size: 0.9rem;
+  border: 1px solid blue;
+  padding: 0.5rem;
+  width: max-content;
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  font-family: cursive;
+  margin: 1rem 0;
+  background-color: transparent;
+  transition: all 0.2s linear;
+}
+#btn:hover,
+#btn:focus {
+  background-color: blue;
+  outline: none;
+}
+p {
+  font-size: 1.3rem;
+}
+span::selection{
+  color: white;
+}
+span {
+  font-size: 0.8rem;
+  color: yellow;
+}

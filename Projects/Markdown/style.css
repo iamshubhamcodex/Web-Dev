@@ -1,0 +1,167 @@
+/* a {
+  color: blue;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.highlight {
+  background-color: yellow;
+  width: 85%;
+  padding: 0 1rem;
+  margin: 0rem auto;
+  border-left: 5px solid blue;
+}
+.cap {
+  text-transform: capitalize;
+}
+.red {
+  padding: 2px 5px;
+  background-color: rgba(128, 128, 128, 0.404);
+  color: red;
+  border-radius: 5px;
+} */
+/* @import url("https://fonts.googleapis.com/css2?family=Amita&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  padding: 1rem 2rem;
+  background-color: #181b29;
+  color: #b9b3ab;
+  font-family: "Amita", cursive;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.head {
+  margin: -0.5rem 0 2rem 0;
+}
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.box-l,
+.box-r {
+  width: 45vw;
+  height: 72vh;
+  border: 1px solid white;
+  border-radius: 1rem;
+  margin: 0 2rem;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+}
+.box-l textarea,
+.box-r div {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #d6d1ca;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro",
+    monospace;
+  overflow: auto;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: text;
+}
+.box-r div::-webkit-scrollbar {
+  display: none;
+}
+.box-r hr {
+  margin: 1rem 0;
+}
+.box-r h1 {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 27px;
+}
+.box-r h2 {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 8px 0;
+}
+.box-r h3 {
+  font-weight: bold;
+  font-size: 22px;
+  margin: 6px 0;
+}
+.box-r h4 {
+  font-weight: bold;
+  font-size: 21px;
+  margin: 5px 0;
+}
+.box-r h5 {
+  font-weight: bold;
+  font-size: 19px;
+  margin: 4px 0;
+}
+.box-r h6 {
+  font-weight: bold;
+  font-size: 17px;
+  margin: 4px 0;
+}
+.box-r p {
+  font-size: 17px;
+  margin: 2px 0;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro";
+}
+.box-r .red {
+  color: red;
+  padding: 0px 4px;
+  border-radius: 2px;
+  background-color: rgba(224, 90, 90, 0.24);
+}
+.box-r a {
+  color: blue;
+}
+.box-r .cap {
+  text-transform: capitalize;
+}
+.box-r .upr {
+  text-transform: uppercase;
+}
+.box-r .highlight {
+  background-color: yellow;
+  border-left: 5px solid blue;
+  width: 80%;
+  padding-left: 10px;
+  margin: 0px auto;
+  color: #181b29;
+}
+
+@media screen and (max-width: 1024px) {
+  .text {
+    flex-direction: column;
+  }
+  .box-l,
+  .box-r {
+    width: 70%;
+    margin: 1.5rem 0;
+  }
+}
+@media screen and (max-width: 752px) {
+  .box-l,
+  .box-r {
+    width: 85%;
+    margin: 1.5rem 0;
+  }
+}
+@media screen and (max-width: 602px) {
+  .box-l,
+  .box-r {
+    width: 95%;
+    margin: 1.5rem 0;
+  }
+}

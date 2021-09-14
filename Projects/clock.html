@@ -6,7 +6,7 @@
         body{display:flex;justify-content:center;align-items:center;background:#aa50e8;min-height:100vh;}
         .container{display:flex;justify-content:center;align-items:center;position:relative;width:300px;height:300px;border-radius:50%;background:rgba(0,0,0,0.1);box-shadow:0 0 8px rgba(0,0,0,0.8),0 0 18px rgba(0,0,0,0.3),0 0 28px rgba(0,0,0,0.1);}
         .container::before{z-index:100;content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:10px;height:10px;background:#fff;border-radius:50%;}
-        .container span{font-family:'Popins', sans-serif;position:absolute;top:50px;left:50px;width:200px;height:200px;transform:rotate(calc(30deg * var(--i)));}
+        .container span{font-family:'Popins', sans-serif;position:absolute;top:50px;left:50px;width:200px;height:200px;/* transform:rotate(calc(30deg * var(--i))); */}
         .container .hands{position:absolute;height:300px;width:300px;display:flex;justify-content:center;align-items:center;padding: 15px;}
         .container .hands .hour{transform:rotate(calc(1deg * var(--h)));width:4px;border-radius:10px;height:60%;background:linear-gradient(chartreuse 60%,transparent 0)}
         .container .hands .minute{transform:rotate(calc(1deg * var(--m)));width:4px;border-radius:10px;height:70%;background:linear-gradient(chartreuse 60%,transparent 0);}
