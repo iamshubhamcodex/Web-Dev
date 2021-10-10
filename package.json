@@ -1,0 +1,28 @@
+{
+  "name": "react_projects",
+  "version": "1.0.0",
+  "description": "In this folder only react based application will be used that may use express server as a backend",
+  "main": "index.js",
+  "dependencies": {
+    "create-react-app": "^4.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamshubhamcodex/Java.git"
+  },
+  "keywords": [
+    "react",
+    "projects",
+    "express"
+  ],
+  "author": "Shubham Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamshubhamcodex/Java/issues"
+  },
+  "homepage": "https://github.com/iamshubhamcodex/Java#readme"
+}
