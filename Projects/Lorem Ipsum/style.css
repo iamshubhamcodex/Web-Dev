@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: serif;
+  line-height: 1.5;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.wrapper {
+  overflow: auto;
+  height: 100vh;
+}
+.top {
+  padding: 0rem 4rem;
+  height: 20rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.bottom {
+  height: calc(100vh - 20rem);
+  position: relative;
+}
+.display {
+  background-color: #ececec;
+  padding: 2rem 0rem 2rem 2rem;
+  position: absolute;
+  left: 4rem;
+  right: 4rem;
+  top: 2rem;
+  bottom: 4rem;
+  overflow: auto;
+}
+.display::-webkit-scrollbar {
+  width: 2rem;
+  height: 1rem;
+}
+.display::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 2.5rem;
+}
+.display::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 2.5rem;
+  border: 0.7rem solid #ececec;
+}
+.display p {
+  margin-bottom: 2.5rem;
+}
+
+/*Form Styles*/
+.wrapper h1 {
+  padding: 1.5rem;
+  font-size: 2.2rem;
+}
+form {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  background-color: #ececec;
+}
+
+form p {
+  line-height: 3rem;
+  height: 3rem;
+  display: inline-block;
+  margin: 0.5rem;
+}
+form input {
+  width: 4rem;
+  text-align: center;
+}
+form select {
+  padding: 0rem 1rem;
+}
+form select,
+form input {
+  display: inline-block;
+  margin: 0rem;
+  line-height: 3rem;
+  height: 2.8rem;
+  border: none;
+  outline: none;
+  border-bottom: 0.2rem solid #999999;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  font-size: 1.7rem;
+}
+form select option {
+  background-color: rgba(128, 128, 128, 0.404);
+  border-radius: .75rem;
+  margin: 0 .2rem;
+}
+#gen {
+  cursor: pointer;
+  display: block;
+  width: 10rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  background-color: #444444;
+  color: #ffffff;
+  border-radius: 0.3rem;
+  margin-top: 1.5rem;
+  transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+}
+#gen:hover {
+  background-color: #666666;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 51.6rem) {
+  html {
+    font-size: 70%;
+  }
+  .top {
+    height: 20rem;
+  }
+  .bottom {
+    height: calc(100vh - 20rem);
+  }
+  .display {
+    top: 6rem;
+  }
+}
