@@ -1,0 +1,81 @@
+:root {
+  --col: rgb(83, 83, 155);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 10rem;
+}
+h2 {
+  margin-bottom: 5rem;
+}
+.cont {
+  background-color: rgb(228, 228, 228);
+  border: 0.5rem solid var(--col);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.cont::after {
+  top: 1rem;
+  position: absolute;
+  content: "";
+  font-variant: JIS04;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 2rem);
+  background: var(--col);
+  z-index: 0;
+}
+.aa {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.aa::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0.25rem;
+  background: rgb(228, 228, 228);
+  z-index: 100;
+  top: 0;
+  right: -3%;
+}
+.number {
+  position: relative;
+  font-size: 7rem;
+  margin: 0.4rem;
+  font-weight: 600;
+  display: grid;
+  width: 100%;
+  place-content: center;
+}
+.number.before {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: calc(99% - 2rem);
+  background-color: var(--col);
+  z-index: 100;
+}
+.translate {
+  transition: transform 0.5s;
+  transform: translateY(140%);
+  box-shadow: 5px 5px 10px -2px rgba(0 0 0 /85%);
+}
+.btn {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}

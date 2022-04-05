@@ -124,7 +124,7 @@ function Note() {
       <h1>Your Notes</h1>
       <div className="row justify-content-center">
         {notes.length === 0 && <NoNotes />}
-        {notes.length !== 0 &&
+        {/* {notes.length !== 0 &&
           notes.map((note) => {
             return (
               <NoteItem
@@ -134,7 +134,7 @@ function Note() {
                 note={note}
               />
             );
-          })}
+          })} */}
       </div>
     </>
   );

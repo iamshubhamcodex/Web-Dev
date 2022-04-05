@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background-color: rgb(72, 70, 70);
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+textarea {
+  outline: none;
+  border: none;
+  resize: none;
+}
+textarea,
+p {
+  width: 50rem;
+  height: 50rem;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+}
+p {
+  border: 1px solid black;
+  color: white;
+}
+p pre {
+  overflow: scroll;
+  height: 100%;
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+}

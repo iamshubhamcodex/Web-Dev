@@ -1,15 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Note from "./Note";
 
 export default function Home() {
-  let history = useNavigate();
+  let history = useHistory();
 
   const NotLog = () => {
     if (localStorage.getItem("token") !== null) {
       return <Note />;
     } else {
-      history("/login");
+      // history.location("/login");
+      console.log(history);
       return "";
     }
   };
