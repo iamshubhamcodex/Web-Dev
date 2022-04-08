@@ -64,7 +64,7 @@ const NoteState = (props) => {
     });
 
     let note = await response.json();
-    setNotes(notes.concat(note));
+    setNotes((notes = [...notes, note]));
   };
 
   // Update a Note
